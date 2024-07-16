@@ -71,7 +71,7 @@ function SubHeader() {
 function NavItem({ to, children }) {
   return (
     <li className='hover:underline border-r border-gray-500 pr-2'>
-      <Link to={to}>{children}</Link>
+      <Link to={to} className='flex flex-row'>{children}</Link>
     </li>
   );
 }
