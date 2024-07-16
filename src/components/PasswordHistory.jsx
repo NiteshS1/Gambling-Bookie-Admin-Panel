@@ -29,7 +29,7 @@ function PasswordHistory() {
       <div>
         <div className="container mx-auto px-4 py-4 ">
           <div className="border border-gray-300 rounded-lg">
-          <h1 className="bg-blue-950 text-white mb-5 p-2 rounded-t-md">Bet History</h1>
+          <h1 className="bg-blue-900 text-white mb-5 p-2 rounded-t-md">Bet History</h1>
 
           <div className="p-4">
             <div className="border border-gray-300 p-4 rounded-lg">

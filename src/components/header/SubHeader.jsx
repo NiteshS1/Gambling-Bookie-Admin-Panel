@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+<link href=".././tailwind.css" rel="stylesheet"></link>;
 
 function SubHeader() {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -23,7 +24,7 @@ function SubHeader() {
   }, []);
 
   return (
-    <div className='flex justify-between bg-white font-bold px-20'>
+    <div className='flex justify-between bg-white font-bold px-20 shadow-xl'>
       <div className='flex justify-evenly'>
         <ul className='flex justify-evenly cursor-pointer space-x-4' ref={dropdownRef}>
           <NavItem to="/dashboard">Dashboard</NavItem>
@@ -33,7 +34,7 @@ function SubHeader() {
             isOpen={openDropdown === 'downline'}
             toggle={() => toggleDropdown('downline')}
           >
-            <NavItem to="/user-downline">User Downline List</NavItem>
+            <NavItem to="/user-downline" >User Downline List</NavItem>
             <NavItem to="/master-downline">Master Downline List</NavItem>
           </DropdownItem>
           <NavItem to="/my-account">My Account</NavItem>
@@ -82,7 +83,7 @@ function DropdownItem({ label, isOpen, toggle, children }) {
         {label}
       </button>
       {isOpen && (
-        <ul className='absolute bg-green-800 text-white shadow-lg p-2'>
+        <ul className='absolute bg-custom-gradient text-white shadow-lg p-2 w-[200px]'>
           {children}
         </ul>
       )}
