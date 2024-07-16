@@ -24,9 +24,9 @@ function SubHeader() {
   }, []);
 
   return (
-    <div className='flex justify-between bg-white font-bold px-20'>
+    <div className='flex justify-between bg-white font-bold px-20 shadow-md shadow-black'>
       <div className='flex justify-evenly'>
-        <ul className='flex justify-evenly cursor-pointer space-x-4' ref={dropdownRef}>
+        <ul className='flex justify-evenly cursor-pointer  space-x-4' ref={dropdownRef}>
           <NavItem to="/dashboard">Dashboard</NavItem>
           {/* <NavItem to="/downline-list">Downline List</NavItem> */}
           <DropdownItem
