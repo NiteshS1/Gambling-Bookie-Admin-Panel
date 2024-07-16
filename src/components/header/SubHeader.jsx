@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 <link href=".././tailwind.css" rel="stylesheet"></link>;
+=======
+<link href=".././tailwind.css" rel="stylesheet"></link>
+>>>>>>> 100eaad05427d70568092b4d032ce451703db931
 
 function SubHeader() {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -83,7 +87,11 @@ function DropdownItem({ label, isOpen, toggle, children }) {
         {label}
       </button>
       {isOpen && (
+<<<<<<< HEAD
         <ul className='absolute bg-custom-gradient text-white shadow-lg p-2 w-[200px]'>
+=======
+        <ul className='absolute bg-custom-gradient text-white shadow-lg p-2'>
+>>>>>>> 100eaad05427d70568092b4d032ce451703db931
           {children}
         </ul>
       )}
