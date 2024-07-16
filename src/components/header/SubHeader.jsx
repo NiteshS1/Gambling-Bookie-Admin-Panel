@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+<link href=".././tailwind.css" rel="stylesheet"></link>
 
 function SubHeader() {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -82,7 +83,7 @@ function DropdownItem({ label, isOpen, toggle, children }) {
         {label}
       </button>
       {isOpen && (
-        <ul className='absolute bg-green-800 text-white shadow-lg p-2'>
+        <ul className='absolute bg-custom-gradient text-white shadow-lg p-2'>
           {children}
         </ul>
       )}
