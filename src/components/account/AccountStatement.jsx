@@ -35,7 +35,7 @@ function AccountStatement() {
         </select>
           <input type="date" name="" id="" className="hover:cursor-pointer mx-6 p-1 w-[14%]" />
           <input type="date" name="" id="" className="hover:cursor-pointer mx-6 p-1 w-[14%]" />
-          <text className="bg-blue-950 rounded-md text-white p-1 font-bold cursor-pointer pl-2 pr-2">
+          <text className="bg-blue-900 rounded-md text-white p-1 font-bold cursor-pointer pl-2 pr-2">
             Get History
           </text>
         </div>

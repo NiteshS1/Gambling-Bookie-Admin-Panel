@@ -29,7 +29,7 @@ function ActivityLog() {
 
         <div className="container mx-auto px-4 py-4 ">
           <div className="border border-gray-300 rounded-lg">
-          <h1 className="bg-blue-950 text-white p-2 rounded-t-md">Activity Log</h1>
+          <h1 className="bg-blue-900 text-white p-2 rounded-t-md">Activity Log</h1>
 
           <div className="p-4">
           <div className="flex justify-between items-center mb-4  ">

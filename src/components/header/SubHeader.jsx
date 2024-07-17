@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+<link href=".././tailwind.css" rel="stylesheet"></link>;
 
 function SubHeader() {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -23,55 +24,51 @@ function SubHeader() {
   }, []);
 
   return (
+<<<<<<< HEAD
     <div className='flex justify-between bg-white font-bold px-20 shadow-md shadow-black'>
+=======
+    <div className='flex justify-between bg-white font-bold px-20 shadow-xl'>
+>>>>>>> 3dda23ab76db7a0224cbfceaa5a2779d4b7b0c25
       <div className='flex justify-evenly'>
         <ul className='flex justify-evenly cursor-pointer space-x-4' ref={dropdownRef}>
-          <NavItem to="/dashboard">Dashboard</NavItem>
+          <li className='hover:underline border-r border-gray-500 pr-2'><Link to="/dashboard">Dashboard</Link></li>
           {/* <NavItem to="/downline-list">Downline List</NavItem> */}
-          <DropdownItem
+          <li className='hover:underline border-r border-gray-500 pr-2'><DropdownItem
             label="Downline List"
             isOpen={openDropdown === 'downline'}
             toggle={() => toggleDropdown('downline')}
           >
-            <NavItem to="/user-downline">User Downline List</NavItem>
-            <NavItem to="/master-downline">Master Downline List</NavItem>
-          </DropdownItem>
-          <NavItem to="/my-account">My Account</NavItem>
-          <DropdownItem
+            <Link to="/user-downline" >User Downline List</Link><br />
+            <Link to="/master-downline">Master Downline List</Link>
+          </DropdownItem></li>
+          <li className='hover:underline border-r border-gray-500 pr-2'><Link to="/my-account">My Account</Link></li>
+          <li className='hover:underline border-r border-gray-500 pr-2'><DropdownItem
             label="My Report"
             isOpen={openDropdown === 'myReport'}
             toggle={() => toggleDropdown('myReport')}
           >
-            <NavItem to="/event">Event Profit/Loss</NavItem>
-            <NavItem to="/downline">Downline Profit/Loss</NavItem>
-          </DropdownItem>
-          <NavItem to="/betlist">BetList</NavItem>
-          <NavItem to="/market-analysis">Market Analysis</NavItem>
-          <DropdownItem
+            <Link to="/event">Event Profit/Loss</Link><br />
+            <Link to="/downline">Downline Profit/Loss</Link>
+          </DropdownItem></li>
+          <li className='hover:underline border-r border-gray-500 pr-2'><Link to="/betlist">BetList</Link></li>
+          <li className='hover:underline border-r border-gray-500 pr-2'><Link to="/market-analysis">Market Analysis</Link></li>
+          <li className='hover:underline border-r border-gray-500 pr-2'><DropdownItem
             label="Banking"
             isOpen={openDropdown === 'banking'}
             toggle={() => toggleDropdown('banking')}
           >
-            <NavItem to="/user">User Banking</NavItem>
-            <NavItem to="/master">Master Banking</NavItem>
-          </DropdownItem>
-          <NavItem to="/commission">Commission</NavItem>
-          <NavItem to="/password-history">Password History</NavItem>
-          <NavItem to="/restore-user">Restore User</NavItem>
+            <Link to="/user">User Banking</Link><br />
+            <Link to="/master">Master Banking</Link>
+          </DropdownItem></li>
+          <li className='hover:underline border-r border-gray-500 pr-2'><Link to="/commission">Commission</Link></li>
+          <li className='hover:underline border-r border-gray-500 pr-2'><Link to="/password-history">Password History</Link></li>
+          <li className='hover:underline border-r border-gray-500 pr-2'><Link to="/restore-user">Restore User</Link></li>
         </ul>
       </div>
       <div>
         <button to="/logout">Logout</button>
       </div>
     </div>
-  );
-}
-
-function NavItem({ to, children }) {
-  return (
-    <li className='hover:underline border-r border-gray-500 pr-2'>
-      <Link to={to}>{children}</Link>
-    </li>
   );
 }
 
@@ -82,7 +79,7 @@ function DropdownItem({ label, isOpen, toggle, children }) {
         {label}
       </button>
       {isOpen && (
-        <ul className='absolute bg-green-800 text-white shadow-lg p-2'>
+        <ul className='absolute bg-custom-gradient text-white shadow-lg p-2 w-[220px]'>
           {children}
         </ul>
       )}
