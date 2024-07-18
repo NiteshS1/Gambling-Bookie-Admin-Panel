@@ -23,6 +23,8 @@ import MyProfile from './components/account/MyProfile';
 import ActivityLog from './components/account/ActivityLog';
 import UserDownline from './components/downline/UserDownline';
 import MasterDownline from './components/downline/MasterDownline';
+import Paymentaccept from  './components/payment/Paymentaccept';
+import PaymentDeclain from  './components/payment/PaymentDeclain';
 
 function App() {
   return (
@@ -54,8 +56,12 @@ function App() {
         <Route path="/restore-user" element={<RestoreUser />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/paymentaccept" element={<Paymentaccept />} />
+        <Route path="/PaymentDeclain" element={<PaymentDeclain />} />
+
       </Routes>
     </Router>
+    
   );
 }
 

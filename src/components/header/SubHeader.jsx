@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-<link href=".././tailwind.css" rel="stylesheet"></link>;
+
 
 function SubHeader() {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -24,49 +24,59 @@ function SubHeader() {
   }, []);
 
   return (
-<<<<<<< HEAD
-    <div className='flex justify-between bg-white font-bold px-20 shadow-md shadow-black'>
-=======
     <div className='flex justify-between bg-white font-bold px-20 shadow-xl'>
->>>>>>> 3dda23ab76db7a0224cbfceaa5a2779d4b7b0c25
       <div className='flex justify-evenly'>
         <ul className='flex justify-evenly cursor-pointer space-x-4' ref={dropdownRef}>
           <li className='hover:underline border-r border-gray-500 pr-2'><Link to="/dashboard">Dashboard</Link></li>
-          {/* <NavItem to="/downline-list">Downline List</NavItem> */}
-          <li className='hover:underline border-r border-gray-500 pr-2'><DropdownItem
-            label="Downline List"
-            isOpen={openDropdown === 'downline'}
-            toggle={() => toggleDropdown('downline')}
-          >
-            <Link to="/user-downline" >User Downline List</Link><br />
-            <Link to="/master-downline">Master Downline List</Link>
-          </DropdownItem></li>
+          <li className='hover:underline border-r border-gray-500 pr-2'>
+            <DropdownItem
+              label="Downline List"
+              isOpen={openDropdown === 'downline'}
+              toggle={() => toggleDropdown('downline')}
+            >
+              <div>
+                <Link to="/user-downline">User Downline List</Link><br />
+                <Link to="/master-downline">Master Downline List</Link>
+              </div>
+            </DropdownItem>
+          </li>
           <li className='hover:underline border-r border-gray-500 pr-2'><Link to="/my-account">My Account</Link></li>
-          <li className='hover:underline border-r border-gray-500 pr-2'><DropdownItem
-            label="My Report"
-            isOpen={openDropdown === 'myReport'}
-            toggle={() => toggleDropdown('myReport')}
-          >
-            <Link to="/event">Event Profit/Loss</Link><br />
-            <Link to="/downline">Downline Profit/Loss</Link>
-          </DropdownItem></li>
+          <li className='hover:underline border-r border-gray-500 pr-2'>
+            <DropdownItem
+              label="My Report"
+              isOpen={openDropdown === 'myReport'}
+              toggle={() => toggleDropdown('myReport')}
+            >
+              <div>
+                <Link to="/event">Event Profit/Loss</Link><br />
+                <Link to="/downline">Downline Profit/Loss</Link>
+              </div>
+            </DropdownItem>
+          </li>
           <li className='hover:underline border-r border-gray-500 pr-2'><Link to="/betlist">BetList</Link></li>
           <li className='hover:underline border-r border-gray-500 pr-2'><Link to="/market-analysis">Market Analysis</Link></li>
-          <li className='hover:underline border-r border-gray-500 pr-2'><DropdownItem
-            label="Banking"
-            isOpen={openDropdown === 'banking'}
-            toggle={() => toggleDropdown('banking')}
-          >
-            <Link to="/user">User Banking</Link><br />
-            <Link to="/master">Master Banking</Link>
-          </DropdownItem></li>
+          <li className='hover:underline border-r border-gray-500 pr-2'>
+            <DropdownItem
+              label="Banking"
+              isOpen={openDropdown === 'banking'}
+              toggle={() => toggleDropdown('banking')}
+            >
+              <div>
+                <Link to="/user">User Banking</Link><br />
+                <Link to="/master">Master Banking</Link>
+              </div>
+            </DropdownItem>
+          </li>
           <li className='hover:underline border-r border-gray-500 pr-2'><Link to="/commission">Commission</Link></li>
           <li className='hover:underline border-r border-gray-500 pr-2'><Link to="/password-history">Password History</Link></li>
           <li className='hover:underline border-r border-gray-500 pr-2'><Link to="/restore-user">Restore User</Link></li>
+          <li className='hover:underline border-r border-gray-500 pr-2'><Link to="/paymentaccept">Payment</Link></li>
+          <li className='hover:underline border-r border-gray-500 pr-2'><Link to="/paymentdeclain">Payment Decline</Link></li>
         </ul>
       </div>
+
       <div>
-        <button to="/logout">Logout</button>
+        <button><Link to="/logout">Logout</Link></button>
       </div>
     </div>
   );
@@ -79,9 +89,9 @@ function DropdownItem({ label, isOpen, toggle, children }) {
         {label}
       </button>
       {isOpen && (
-        <ul className='absolute bg-custom-gradient text-white shadow-lg p-2 w-[220px]'>
+        <div className='absolute bg-custom-gradient text-white shadow-lg p-2 w-[220px]'>
           {children}
-        </ul>
+        </div>
       )}
     </li>
   );
