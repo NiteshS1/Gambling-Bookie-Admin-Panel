@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SubHeader from "./components/header/SubHeader";
 import Dashboard from './components/Dashboard';
@@ -23,6 +23,7 @@ import MyProfile from './components/account/MyProfile';
 import ActivityLog from './components/account/ActivityLog';
 import UserDownline from './components/downline/UserDownline';
 import MasterDownline from './components/downline/MasterDownline';
+import Payment from './components/payment/Payment';
 
 function App() {
   return (
@@ -54,6 +55,8 @@ function App() {
         <Route path="/restore-user" element={<RestoreUser />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/payment" element={<Payment />} />
+
       </Routes>
     </Router>
   );

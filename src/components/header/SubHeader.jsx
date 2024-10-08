@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 <link href=".././tailwind.css" rel="stylesheet"></link>;
 
@@ -59,6 +59,7 @@ function SubHeader() {
           <li className='hover:underline border-r border-gray-500 pr-2'><Link to="/commission">Commission</Link></li>
           <li className='hover:underline border-r border-gray-500 pr-2'><Link to="/password-history">Password History</Link></li>
           <li className='hover:underline border-r border-gray-500 pr-2'><Link to="/restore-user">Restore User</Link></li>
+          <li className='hover:underline border-r border-gray-500 pr-2'><Link to="/Payment">Payment</Link></li>
         </ul>
       </div>
       <div>
@@ -84,3 +85,4 @@ function DropdownItem({ label, isOpen, toggle, children }) {
 }
 
 export default SubHeader;
+
